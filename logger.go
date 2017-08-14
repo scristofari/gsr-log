@@ -19,5 +19,6 @@ type Logger interface {
 	// Detailed debug information.
 	Debug(format string, args ...interface{})
 	// Logs with an arbitrary level.
+	// Return a ErrInvalidArgument error when a bad level is specified
 	Log(level Level, format string, args ...interface{})
 }
