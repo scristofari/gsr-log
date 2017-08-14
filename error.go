@@ -1,4 +1,4 @@
 package gsrlog
 
-// InvalidArgumentError needed when a bad level is specified.
-type InvalidArgumentError error
+// ErrInvalidArgument needed when a bad level is specified.
+type ErrInvalidArgument error

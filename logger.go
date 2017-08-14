@@ -3,21 +3,21 @@ package gsrlog
 // Logger describes a logger-aware instance.
 type Logger interface {
 	// System is unusable.
-	Emergency(message string, context ...interface{})
+	Emergency(format string, args ...interface{})
 	// Action must be taken immediately.
-	Alert(message string, context ...interface{})
+	Alert(format string, args ...interface{})
 	// Critical conditions.
-	Critical(message string, context ...interface{})
+	Critical(format string, args ...interface{})
 	// Runtime errors that do not require immediate action but should typically be logged and monitored.
-	Error(message string, context ...interface{})
+	Error(format string, args ...interface{})
 	// Exceptional occurrences that are not errors.
-	Warning(message string, context ...interface{})
+	Warning(format string, args ...interface{})
 	// Normal but significant events.
-	Notice(message string, context ...interface{})
+	Notice(format string, args ...interface{})
 	// Interesting events.
-	Info(message string, context ...interface{})
+	Info(format string, args ...interface{})
 	// Detailed debug information.
-	Debug(message string, context ...interface{})
+	Debug(format string, args ...interface{})
 	// Logs with an arbitrary level.
-	Log(level Level, message string, context ...interface{})
+	Log(level Level, format string, args ...interface{})
 }
